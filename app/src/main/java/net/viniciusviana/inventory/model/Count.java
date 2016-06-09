@@ -48,4 +48,13 @@ public class Count {
         this.blocks = blocks;
     }
 
+    //METHODS
+    public long getTotCount(){
+        long temp=0;
+        for(Block b:this.blocks)
+            for(Item i:b.getItens())
+                temp+=i.getQuantity();
+        return temp;
+    }
+
 }
