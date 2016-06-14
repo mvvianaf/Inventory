@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="net.viniciusviana.inventory.InfoActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EMPRESA"
+        android:id="@+id/lblCompanyView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Company Name"
+        android:id="@+id/lblCompany"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL ENCONTRADO"
+        android:id="@+id/lblTotFondView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0000"
+        android:id="@+id/lblTotFound"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INICIO"
+        android:id="@+id/lblStartView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00/00/0000"
+        android:id="@+id/lblStart"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FIM"
+        android:id="@+id/lblEndView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00/00/0000"
+        android:id="@+id/lblEnd"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CODIGOS REGISTRADOS"
+        android:id="@+id/lblCodeSaveView"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvItens"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.50"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EXCLUIR"
+            android:layout_weight="0.50"
+            android:id="@+id/btnDelete" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ENVIAR"
+            android:layout_weight="0.50"
+            android:id="@+id/btnSend" />
+
+    </LinearLayout>
+
+</LinearLayout>

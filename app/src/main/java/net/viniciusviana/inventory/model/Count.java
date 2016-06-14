@@ -1,21 +1,27 @@
 package net.viniciusviana.inventory.model;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 /**
  * Created by Vinicius Viana on 08/06/2016.
  */
-public class Count {
+public class Count implements Serializable{
 
-    private long id;
+    private String id;
     private String company;
     private Calendar dateTimeStart;
     private Calendar dateTimeEnd;
-    private List<Block> blocks;
+    private List<Item> itens;
+
+    public Count(){
+        this.itens = new ArrayList<>();
+    }
 
     //GET
-    public long getId() {
+    public String getId() {
         return id;
     }
     public String getCompany() {
@@ -27,12 +33,12 @@ public class Count {
     public Calendar getDateTimeEnd() {
         return dateTimeEnd;
     }
-    public List<Block> getBlocks() {
-        return blocks;
+    public List<Item> getItens() {
+        return itens;
     }
 
     //SET
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
     public void setCompany(String company) {
@@ -44,17 +50,20 @@ public class Count {
     public void setDateTimeEnd(Calendar dateTimeEnd) {
         this.dateTimeEnd = dateTimeEnd;
     }
-    public void setBlocks(List<Block> blocks) {
-        this.blocks = blocks;
+    public void setItens(List<Item> itens) {
+        this.itens= itens;
     }
 
     //METHODS
     public long getTotCount(){
         long temp=0;
-        for(Block b:this.blocks)
-            for(Item i:b.getItens())
-                temp+=i.getQuantity();
+        for(Item i:this.itens)
+            temp+=i.getQuantity();
         return temp;
+    }
+
+    public void setItem(Item i){
+        this.itens.add(i);
     }
 
 }

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".YoungActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EMPRESA"
+        android:id="@+id/lblCompanyView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCompany"
+            android:layout_weight="0.90"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnStart"
+            android:text="INICIAR"
+            android:layout_marginTop="-5dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CODIGO DE BARRA"
+        android:id="@+id/lblBarCodeView"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtBarCode"
+            android:layout_weight="0.90"
+            android:enabled="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnInsert"
+            android:text="INSERIR"
+            android:layout_marginTop="-5dp"
+            android:enabled="false" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CODIGOS REGISTRADOS"
+        android:id="@+id/lblCodeSaveView"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvItens"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.50"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEnd"
+        android:text="FINALIZAR"
+        android:layout_marginTop="-5dp"
+        android:enabled="false" />
+
+</LinearLayout>
