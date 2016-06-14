@@ -66,4 +66,11 @@ public class Count implements Serializable{
         this.itens.add(i);
     }
 
+    public String getEmail(){
+        String email="";
+        for(Item i:this.itens)
+            email+=i.getBarCode()+","+i.getQuantity()+"\n";
+        return email;
+    }
+
 }

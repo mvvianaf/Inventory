@@ -99,4 +99,18 @@ public class CountDao extends SQLiteOpenHelper{
         return counts;
     }
 
+    public void delete(String idCount){
+        SQLiteDatabase db = getWritableDatabase();
+        try{
+            db.delete("counts","id="+idCount,null);
+            new ItemDao(this.context).delete(idCount);
+            Toast.makeText(this.context,"CONTAGEM EXCLUIDA COM SUCESSO!",Toast.LENGTH_SHORT).show();
+        }catch(Exception e){
+            Toast.makeText(this.context,"ERRO AO EXCLUIR A CONTAGEM!",Toast.LENGTH_SHORT).show();
+        }
+        finally {
+            db.close();
+        }
+    }
+
 }

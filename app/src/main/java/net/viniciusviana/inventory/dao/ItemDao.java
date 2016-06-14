@@ -83,4 +83,16 @@ public class ItemDao extends SQLiteOpenHelper{
         }
         return itens;
     }
+
+    public void delete(String idCount){
+        SQLiteDatabase db = getWritableDatabase();
+        try{
+            db.delete("itens","id_count="+idCount,null);
+        }catch(Exception e){
+            Toast.makeText(this.context,"ERRO AO EXCLUIR OS ITENS DA CONTAGEM "+idCount+" !",Toast.LENGTH_SHORT).show();
+        }
+        finally {
+            db.close();
+        }
+    }
 }

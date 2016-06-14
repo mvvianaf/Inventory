@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import net.viniciusviana.inventory.adapter.CountAdapter;
+import net.viniciusviana.inventory.controller.CountController;
 import net.viniciusviana.inventory.dao.CountDao;
 import net.viniciusviana.inventory.model.Count;
 import net.viniciusviana.inventory.model.Item;
@@ -94,8 +95,8 @@ public class MainActivity extends AppCompatActivity implements OnMenuItemClickLi
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        CountController.c = this.counts.get(position);
         Intent intent = new Intent(this,InfoActivity.class);
-        intent.putExtra("count",this.counts.get(position));
         startActivity(intent);
     }
 }
