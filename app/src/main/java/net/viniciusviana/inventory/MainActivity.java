@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+
 public class MainActivity extends AppCompatActivity implements OnMenuItemClickListener,AdapterView.OnItemClickListener{
 
     private List<Count> counts;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements OnMenuItemClickLi
         //LIST COUNTS
         this.counts = new CountDao(this).getCounts();
         this.lvCounts.setAdapter(new CountAdapter(this,this.counts));
+
+
     }
 
 
